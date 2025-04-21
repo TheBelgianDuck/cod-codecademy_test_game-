@@ -107,16 +107,16 @@ path_thief = path('thief', 50, 150)
 path_warrior = path('warrior', 100, 100)  
 
 #getting names
-player_one_name = input('\nHello adventurer, welcome to honneywood, what is your name?')
-player_two_name = input('\nAnd who is your companion?')
+player_one_name = input('\nHello adventurer, welcome to honneywood, what is your name? ')
+player_two_name = input('\nAnd who is your companion? ')
 print('\n\nAh yes {} and {}, I Thought it was you!'.format(player_one_name, player_two_name))
 
 #quest one
 def Quest_start(name):
-    quest_start = input('\nThese are troubling times, we have a big problem {} and {}, will you help us with the {} Quest?(Y/N)'.format(player_one_name, player_two_name, name))
+    quest_start = input('\nThese are troubling times, we have a big problem {} and {}, will you help us with the {} Quest?(Y/N) '.format(player_one_name, player_two_name, name))
     try:
         while quest_start not in ['Y', 'N']:
-            quest_start = input('Please answer with Y or N')
+            quest_start = input('Please answer with Y or N ')
     except Exception as e:
         print('Error')
     if quest_start == 'Y':
@@ -125,11 +125,11 @@ def Quest_start(name):
     elif quest_start == 'N':
         print('\nI am very dissappointed in you adventurer, you dare turn your back on the people of honneyWOOD!?\n I WILL MAKE YOU PAY... \nGUARD!!!')
         print('\n*** The Guard hits you so hard with his sword there is nothing to recover ***')
-    fatality_answer = input('''\nWell that didn't last long, do you wish to restart?''')
+    fatality_answer = input('''\nWell that didn't last long, do you wish to restart? ''')
 
     try:
         while fatality_answer not in ['Y']:
-            fatality_answer = input('\nPlease press Y')
+            fatality_answer = input('\nPlease press Y ')
     except Exception as e:
         print('Error')
     if fatality_answer == 'Y':
@@ -145,9 +145,9 @@ print('\n' + str(path_beserker) + '\n' + str(path_thief) + '\n' + str(path_warri
 
 #chosing path and defining players
 def path_choice(player):
-    path_choice = input('\nwhich will it be, {}?'.format(player.name))
+    path_choice = input('\nwhich will it be, {}? '.format(player.name))
     while path_choice not in ['beserker', 'thief', 'warrior']:
-      path_choice = input('\nNot in the options, please try again.')
+      path_choice = input('\nNot in the options, please try again. ')
     return path_choice
 
 #first defining players
